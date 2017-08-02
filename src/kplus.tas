@@ -1,58 +1,22 @@
 ;
-; **** ZP FIELDS **** 
+; **** ZP FIELDS ****
 ;
-f00 = $00
-f05 = $05
-f06 = $06
-f07 = $07
-f09 = $09
-f11 = $11
-f14 = $14
-f16 = $16
-f22 = $22
 f27 = $27
 f28 = $28
 f36 = $36
 f37 = $37
-f46 = $46
-f48 = $48
-f55 = $55
-f91 = $91
-fAA = $AA
-fB0 = $B0
-fB9 = $B9
-fC8 = $C8
-fE1 = $E1
-fE3 = $E3
-fEA = $EA
 ;
-; **** ZP ABSOLUTE ADRESSES **** 
+; **** ZP ABSOLUTE ADRESSES ****
 ;
 a01 = $01
 a02 = $02
-a04 = $04
-a05 = $05
-a06 = $06
-a07 = $07
-a0A = $0A
-a11 = $11
-a1B = $1B
-a20 = $20
-a22 = $22
-a24 = $24
 a2B = $2B
 a2C = $2C
 a2D = $2D
-a33 = $33
-a36 = $36
-a44 = $44
 a46 = $46
-a48 = $48
-a4B = $4B
 a4E = $4E
 a4F = $4F
 a50 = $50
-a52 = $52
 a55 = $55
 a57 = $57
 a64 = $64
@@ -78,119 +42,63 @@ a86 = $86
 a87 = $87
 a88 = $88
 a89 = $89
-a91 = $91
 aA5 = $A5
 aA6 = $A6
 aA7 = $A7
 aA8 = $A8
-aBE = $BE
-aC5 = $C5
-aC9 = $C9
 aCB = $CB
 aFB = $FB
 aFC = $FC
 aFD = $FD
 aFE = $FE
-aFF = $FF
 ;
-; **** ZP POINTERS **** 
+; **** ZP POINTERS ****
 ;
-p00 = $00
-p02 = $02
-p06 = $06
-p07 = $07
-p0F = $0F
-p11 = $11
-p1B = $1B
-p25 = $25
-p39 = $39
-p4A = $4A
-p53 = $53
 p73 = $73
 p7F = $7F
 p87 = $87
-p9D = $9D
-pA1 = $A1
 pA6 = $A6
-pC7 = $C7
 pFB = $FB
 pFD = $FD
 ;
-; **** FIELDS **** 
+; **** FIELDS ****
 ;
-f000C = $000C
-f000F = $000F
 f002C = $002C
 f0200 = $0200
-f0280 = $0280
 f02E0 = $02E0
 f0406 = $0406
 f04E8 = $04E8
-f05C8 = $05C8
 f078F = $078F
 f07C6 = $07C6
 f07FA = $07FA
 f0980 = $0980
-f09C8 = $09C8
 f0A07 = $0A07
-f0B05 = $0B05
 f0BE0 = $0BE0
-f0F0F = $0F0F
-f11B1 = $11B1
 f21BF = $21BF
 f2242 = $2242
-f22B1 = $22B1
 f22BF = $22BF
 f2309 = $2309
-f24B1 = $24B1
-f2DB1 = $2DB1
-f469B = $469B
 f9D9D = $9D9D
-fB90F = $B90F
-fB912 = $B912
-fBD81 = $BD81
-fBE0A = $BE0A
-fBE0B = $BE0B
-fBE0F = $BE0F
-fBE14 = $BE14
-fBF0C = $BF0C
-fC00F = $C00F
-fC7C9 = $C7C9
 fCFFF = $CFFF
 fD001 = $D001
 fD3FF = $D3FF
 fDBC6 = $DBC6
-fFEFE = $FEFE
-fFEFF = $FEFF
-fFFFE = $FFFE
 ;
-; **** ABSOLUTE ADRESSES **** 
+; **** ABSOLUTE ADRESSES ****
 ;
-a003C = $003C
-a00C8 = $00C8
 a0286 = $0286
 a0291 = $0291
 a0300 = $0300
 a0301 = $0301
 a0314 = $0314
 a0315 = $0315
-a0508 = $0508
 a07F8 = $07F8
 a07F9 = $07F9
 a07FF = $07FF
 a0A00 = $0A00
-a0A08 = $0A08
 a0A80 = $0A80
 a0B60 = $0B60
 a0B80 = $0B80
-a0FB9 = $0FB9
-a11C6 = $11C6
-a2049 = $2049
-a4550 = $4550
-a4E45 = $4E45
-a554D = $554D
-aB108 = $B108
-aC8FF = $C8FF
 aD000 = $D000
 aD003 = $D003
 aD004 = $D004
@@ -214,7 +122,7 @@ aD418 = $D418
 aDC01 = $DC01
 aE920 = $E920
 ;
-; **** POINTERS **** 
+; **** POINTERS ****
 ;
 p0202 = $0202
 p03B0 = $03B0
@@ -233,13 +141,10 @@ p1E05 = $1E05
 p8B88 = $8B88
 pD7FF = $D7FF
 ;
-; **** EXTERNAL JUMPS **** 
+; **** EXTERNAL JUMPS ****
 ;
 e0000 = $0000
-e1149 = $1149
 e204D = $204D
-e494F = $494F
-e4B4B = $4B4B
 eAB1E = $AB1E
 eBDCD = $BDCD
 eE50C = $E50C
@@ -247,288 +152,103 @@ eE544 = $E544
 eE882 = $E882
 eEA31 = $EA31
 
-        * = $7350
+        * = $7350-4
+        ;begin jvfix#1 hide cursor
+        LDA #$FF
+        STA $CC
+        ;end jvfix#1
 
         JMP j7F58
 
-        NOP 
-        NOP 
-        NOP 
-        NOP 
-        NOP 
-        NOP 
-p7359   ORA (p25),Y
-        ASL fE3,X
-        ORA (p25),Y
-        ORA f11B1,Y
-        AND a1B
-        SEC 
-        ORA (p25),Y
-        .BYTE $22           ;JAM 
-        .BYTE $4B,$11       ;ALR #$11
-        AND a24
-        EOR f11,X
-        AND a22
-        .BYTE $4B,$11       ;ALR #$11
-        AND a1B
-        SEC 
-        ORA (p25),Y
-        ORA f11B1,Y
-        AND a22
-        .BYTE $4B,$1B       ;ALR #$1B
-        SEC 
-        ORA (p25),Y
-        ASL fE3,X
-        ORA (p25),Y
-        ORA f11B1,Y
-        AND a2D
-        DEC a11
-        AND a24
-        EOR f11,X
-        AND a36
-        .BYTE $6F,$11,$25   ;RRA $2511
-        AND a11C6
-        AND a44
-        STA f11,X
-        AND a48
-        LDA #$11
-        AND a36
-        .BYTE $6F,$11,$22   ;RRA $2211
-        .BYTE $33,$61       ;RLA ($61),Y
-        ORA (p25),Y
-        .BYTE $22           ;JAM 
-        .BYTE $4B,$11       ;ALR #$11
-        AND a1B
-        SEC 
-        ORA (p25),Y
-        .BYTE $89,$2B       ;NOP #$2B
-        ORA (p25),Y
-        STA (p53),Y
-        ORA (p25),Y
-        .BYTE $89,$2B       ;NOP #$2B
-        ORA (p25),Y
-        PHA 
-        LDA #$11
-        AND a33
-        ADC (p11,X)
-        AND a1B
-        SEC 
-        ORA (p25),Y
-        ORA f11B1,Y
-        AND a24
-        EOR f11,X
-        AND a48
-        LDA #$11
-        AND a44
-        STA f11,X
-        AND a91
-        .BYTE $53,$11       ;SRE (p11),Y
-        AND a89
-        .BYTE $2B,$16       ;ANC #$16
-        .BYTE $E3,$19       ;ISC ($19,X)
-        LDA (p1B),Y
-        SEC 
-        .BYTE $22           ;JAM 
-        .BYTE $4B,$24       ;ALR #$24
-        EOR f22,X
-        .BYTE $4B,$1B       ;ALR #$1B
-        SEC 
-        ORA f22B1,Y
-        .BYTE $4B,$1B       ;ALR #$1B
-        SEC 
-        ASL fE3,X
-        ORA f2DB1,Y
-        DEC a24
-        EOR f36,X
-        .BYTE $6F,$2D,$C6   ;RRA $C62D
-        .BYTE $44,$95       ;NOP $95
-        PHA 
-        LDA #$36
-        .BYTE $6F,$33,$61   ;RRA $6133
-        .BYTE $22           ;JAM 
-        .BYTE $4B,$1B       ;ALR #$1B
-        SEC 
-        .BYTE $89,$2B       ;NOP #$2B
-        .BYTE $8F,$53,$89   ;SAX $8953
-        .BYTE $2B,$48       ;ANC #$48
-        LDA #$33
-        ADC (p1B,X)
-        SEC 
-        ORA f24B1,Y
-        EOR f48,X
-        LDA #$44
-        STA f91,X
-        .BYTE $53,$89       ;SRE (p89),Y
-        .BYTE $2B,$00       ;ANC #$00
-        .BYTE $0B,$C2       ;ANC #$C2
-        .BYTE $0C,$BD,$0A   ;NOP $0ABD
-        LDA ~f000C,X
-        .BYTE $0B,$09       ;ANC #$09
-        LDX f09,Y
-        INY 
-        ORA #$B6
-        ORA #$00
-        .BYTE $0B,$C0       ;ANC #$C0
-        ASL 
-        DEC ~a00C8
-        .BYTE $03,$08       ;SLO ($08,X)
-        PHP 
-        LDA fB912,Y
-        .BYTE $D2           ;JAM 
-        ORA (p00,X)
-        .BYTE $0B,$08       ;ANC #$08
-        LDA fBE0A,Y
-        .BYTE $0F,$B9,$0F   ;SLO a0FB9
-        BRK 
-        .BYTE $03,$0A       ;SLO (p0A,X)
-        LDX fBE0F,Y
-        ASL 
-        CMP #$00
-        ORA #$01
-        .BYTE $C7,$01       ;DCP a01
-        .BYTE $C7,$01       ;DCP a01
-        .BYTE $C7,$01       ;DCP a01
-        BRK 
-        ASL 
-        ORA (pC7,X)
-        CMP #$01
-        INY 
-        BRK 
-        .BYTE $02           ;JAM 
-        .BYTE $0F,$B9,$07   ;SLO $07B9
-        CMP (p07,X)
-        CMP (p0F,X)
-        BRK 
-        .BYTE $02           ;JAM 
-        .BYTE $07,$09       ;SLO a09
-        .BYTE $B7,$07       ;LAX f07,Y
-        .BYTE $07,$07       ;SLO a07
-        LDA f07,X
-        .BYTE $07,$05       ;SLO a05
-b747A   =*+$01
-        LDY f07,X
-        .BYTE $07,$06       ;SLO a06
-        BRK 
-        ORA (p06,X)
-        ASL a06
-        LDX fC7C9,Y
-        .BYTE $02           ;JAM 
-        BRK 
-        .BYTE $03,$C4       ;SLO ($C4,X)
-        ORA a0A
-b748C   =*+$01
-        LDA f0B05,Y
-        CLV 
-        ORA a0A
-        BRK 
-        .BYTE $03,$0A       ;SLO (p0A,X)
-b7495   =*+$01
-        LDX fB90F,Y
-        ASL 
-        LDX f000F,Y
-        .BYTE $03,$12       ;SLO ($12,X)
-        LDA fBF0C,Y
-        ASL aC5
-        BRK 
-        .BYTE $03,$05       ;SLO (p05,X)
-        .BYTE $07,$07       ;SLO a07
-        LDY f06,X
-        ASL a06
-        LDX f07,Y
-        .BYTE $07,$06       ;SLO a06
-        LDX f05,Y
-        .BYTE $07,$06       ;SLO a06
-        BRK 
-        .BYTE $14,$B3       ;NOP $B3,X
-        .BYTE $14,$BE       ;NOP fBE,X
-        LDX fBE14,Y
-        ASL 
-        ORA fB0,X
-        CLC 
-        BCS b74C9
-        INY 
-        BPL b748C
-        BPL b747A
-        ASL 
-        ASL 
-b74C9   =*+$01
-b74C8   LDY f05C8,X
-        CMP a05
-        ORA #$B8
-        BPL b7495
-        INY 
-        ASL 
-        INY 
-        ORA aB108
-        .BYTE $07,$C2       ;SLO $C2
-        ORA fB9,X
-        CMP a0A08
-        LDX fBE0B,Y
-        INY 
-        LDX f0F0F,Y
-        .BYTE $04,$C4       ;NOP $C4
-        .BYTE $04,$C4       ;NOP $C4
-        .BYTE $04,$C4       ;NOP $C4
-        .BYTE $04,$09       ;NOP a09
-        ORA #$B2
-        ORA fC8,X
-        LDY f14,X
-        INY 
-        .BYTE $12           ;JAM 
-        LDA fC00F,Y
-        PHP 
-        .BYTE $B2           ;JAM 
-        ASL a0508
-        ORA a07
-        TSX 
-        BPL b74C8
-        .BYTE $C2,$C8       ;NOP #$C8
-        .BYTE $14,$C2       ;NOP $C2,X
-        DEC a04
-        CPY a02
-        CLV 
-        BPL b751C
-        LDX fBE0A,Y
-        ASL 
-        LDX fBE0B,Y
-        ASL 
-        ASL aBE
-        ORA a0FB9
-b751C   =*+$02
-        LDY f09C8,X
-        .BYTE $02           ;JAM 
-        .BYTE $C2,$0A       ;NOP #$0A
-        TSX 
-        .BYTE $12           ;JAM 
-        LDY f16,X
-        ASL 
-        ASL aC9
-        TSX 
-        .BYTE $12           ;JAM 
-        .BYTE $B7,$0D       ;LAX $0D,Y
-        INY 
+        NOP
+        NOP
+        NOP
+        NOP
+        NOP
+        NOP
+
+p7359   .BYTE $11,$25,$16,$E3,$11,$25,$19,$B1
+        .BYTE $11,$25,$1B,$38,$11,$25,$22,$4B
+        .BYTE $11,$25,$24,$55,$11,$25,$22,$4B
+        .BYTE $11,$25,$1B,$38,$11,$25,$19,$B1
+        .BYTE $11,$25,$22,$4B,$1B,$38,$11,$25
+        .BYTE $16,$E3,$11,$25,$19,$B1,$11,$25
+        .BYTE $2D,$C6,$11,$25,$24,$55,$11,$25
+        .BYTE $36,$6F,$11,$25,$2D,$C6,$11,$25
+        .BYTE $44,$95,$11,$25,$48,$A9,$11,$25
+        .BYTE $36,$6F,$11,$22,$33,$61,$11,$25
+        .BYTE $22,$4B,$11,$25,$1B,$38,$11,$25
+        .BYTE $89,$2B,$11,$25,$91,$53,$11,$25
+        .BYTE $89,$2B,$11,$25,$48,$A9,$11,$25
+        .BYTE $33,$61,$11,$25,$1B,$38,$11,$25
+        .BYTE $19,$B1,$11,$25,$24,$55,$11,$25
+        .BYTE $48,$A9,$11,$25,$44,$95,$11,$25
+        .BYTE $91,$53,$11,$25,$89,$2B,$16,$E3
+        .BYTE $19,$B1,$1B,$38,$22,$4B,$24,$55
+        .BYTE $22,$4B,$1B,$38,$19,$B1,$22,$4B
+        .BYTE $1B,$38,$16,$E3,$19,$B1,$2D,$C6
+        .BYTE $24,$55,$36,$6F,$2D,$C6,$44,$95
+        .BYTE $48,$A9,$36,$6F,$33,$61,$22,$4B
+        .BYTE $1B,$38,$89,$2B,$8F,$53,$89,$2B
+        .BYTE $48,$A9,$33,$61,$1B,$38,$19,$B1
+        .BYTE $24,$55,$48,$A9,$44,$95,$91,$53
+        .BYTE $89,$2B,$00,$0B,$C2,$0C,$BD,$0A
+        .BYTE $BD,$0C,$00,$0B,$09,$B6,$09,$C8
+        .BYTE $09,$B6,$09,$00,$0B,$C0,$0A,$CE
+        .BYTE $C8,$00,$03,$08,$08,$B9,$12,$B9
+        .BYTE $D2,$01,$00,$0B,$08,$B9,$0A,$BE
+        .BYTE $0F,$B9,$0F,$00,$03,$0A,$BE,$0F
+        .BYTE $BE,$0A,$C9,$00,$09,$01,$C7,$01
+        .BYTE $C7,$01,$C7,$01,$00
+        .BYTE $0A,$01,$C7,$C9,$01,$C8,$00,$02
+        .BYTE $0F,$B9,$07,$C1,$07,$C1,$0F,$00
+        .BYTE $02,$07,$09,$B7,$07,$07,$07,$B5
+        .BYTE $07,$07,$05,$B4,$07,$07,$06,$00
+        .BYTE $01,$06,$06,$06,$BE,$C9,$C7,$02
+        .BYTE $00,$03,$C4,$05,$0A,$B9,$05,$0B
+        .BYTE $B8,$05,$0A,$00,$03,$0A,$BE,$0F
+        .BYTE $B9,$0A,$BE,$0F,$00,$03,$12,$B9
+        .BYTE $0C,$BF,$06,$C5,$00,$03,$05,$07
+        .BYTE $07,$B4,$06,$06,$06,$B6,$07,$07
+        .BYTE $06,$B6,$05,$07,$06,$00,$14,$B3
+        .BYTE $14,$BE,$BE,$14,$BE,$0A,$15,$B0
+        .BYTE $18,$B0,$08,$C8,$10,$C8,$10,$B4
+        .BYTE $0A,$0A,$BC,$C8,$05,$C5,$05,$09
+        .BYTE $B8,$10,$C4,$C8,$0A,$C8,$0D,$08
+        .BYTE $B1,$07,$C2,$15,$B9,$CD,$08,$0A
+        .BYTE $BE,$0B,$BE,$C8,$BE,$0F,$0F,$04
+        .BYTE $C4,$04,$C4,$04,$C4,$04,$09,$09
+        .BYTE $B2
+        .BYTE $15,$C8,$B4,$14,$C8,$12,$B9,$0F
+        .BYTE $C0,$08,$B2,$0E,$08,$05,$05,$07
+        .BYTE $BA,$10,$C6,$C2,$C8,$14,$C2,$C6
+        .BYTE $04,$C4,$02,$B8,$10,$0F,$BE,$0A
+        .BYTE $BE,$0A,$BE,$0B,$BE,$0A,$06,$BE
+        .BYTE $0D,$B9,$0F,$BC,$C8,$09,$02,$C2
+        .BYTE $0A,$BA,$12,$B4,$16,$0A,$06,$C9
+        .BYTE $BA,$12,$B7,$0D,$C8
 s752C   LDA #$41
         BNE b7532
 s7530   LDA #$42
 b7532   LDY #$1A
 b7534   STA (pFB),Y
-        DEY 
+        DEY
         BNE b7534
         JSR s7562
-        RTS 
+        RTS
 
 s753D   LDY #$19
-b753F   TYA 
-        PHA 
+b753F   TYA
+        PHA
         LDY #$00
         LDA a02
         STA (pFB),Y
         JSR s7562
-        PLA 
-        TAY 
-        DEY 
+        PLA
+        TAY
+        DEY
         BNE b753F
-        RTS 
+        RTS
 
 s7550   LDY #<pD7FF
         STY aFB
@@ -538,36 +258,36 @@ s7550   LDY #<pD7FF
 b755A   LDY #$1F
         JMP j7570
 
-        NOP 
-        NOP 
-        NOP 
-s7562   CLC 
+        NOP
+        NOP
+        NOP
+s7562   CLC
         LDA aFB
         ADC #$28
         STA aFB
         LDA aFC
         ADC #$00
         STA aFC
-        RTS 
+        RTS
 
-j7570   PHA 
+j7570   PHA
         JSR b7534
-        PLA 
-        DEX 
+        PLA
+        DEX
         BNE b755A
         JMP j7DC8
 
-s757B   NOP 
+s757B   NOP
         JSR s7905
         LDA #$04
         STA aFC
         LDX #$05
 b7585   LDY #$04
 b7587   JSR s7562
-        DEY 
+        DEY
         BNE b7587
         JSR s7530
-        DEX 
+        DEX
         BNE b7585
         LDA #<p042B
         STA aFB
@@ -581,7 +301,7 @@ b75A0   JSR s7562
 j75A6   JSR s752C
         JSR s752C
         JSR s752C
-        DEX 
+        DEX
         BNE b75A0
         LDA #<p0400
         STA aFB
@@ -606,11 +326,11 @@ b75D6   INC aFD
         LDA #$04
         STA aFC
         JSR s753D
-        DEX 
+        DEX
         BNE b75D6
-        RTS 
+        RTS
 
-s75E7   SEI 
+s75E7   SEI
         LDA #$23
         STA a01
         LDY #$00
@@ -623,70 +343,46 @@ s75E7   SEI
         LDX #$08
 b75FC   LDA (pFB),Y
         STA (pFD),Y
-        INY 
+        INY
         BNE b75FC
         INC aFC
         INC aFE
-        DEX 
+        DEX
         BNE b75FC
         LDA #$27
         STA a01
-        CLI 
+        CLI
         LDX #$51
 b7611   LDA f7622,X
         STA f0A07,X
-        DEX 
+        DEX
         BNE b7611
-        RTS 
+        RTS
 
-b761B   LDA #$02
+        LDA #$02
         JMP j7D77
 
-        NOP 
-f7622   =*+$01
-        EOR fEA,X
-        .BYTE $FB,$FB,$FB   ;ISC $FBFB,Y
-        BRK 
-        .BYTE $BF,$BF,$BF   ;LAX $BFBF,Y
-        BRK 
-        .BYTE $FF,$00,$FF   ;ISC $FF00,X
-        .BYTE $FF,$AA,$55   ;ISC $55AA,X
-        TAX 
-        EOR f00,X
-        .BYTE $FF,$D5,$AB   ;ISC $ABD5,X
-        .BYTE $FF,$AB,$D5   ;ISC $D5AB,X
-        .BYTE $FF,$00,$7F   ;ISC $7F00,X
-        .BYTE $7F,$7F,$7F   ;RRA $7F7F,X
-        .BYTE $7F,$7F,$00   ;RRA ~$007F,X
-s7643   DEC a71
-        BEQ b761B
-        RTS 
-
-        NOP 
-        NOP 
-        NOP 
-        ROR fBD81,X
-        LDA (pA1,X)
-        LDA f7E81,X
-        BRK 
-        .BYTE $FF,$87,$87   ;ISC $8787,X
-        .BYTE $FF,$FF,$FE   ;ISC fFEFF,X
-        .BYTE $FC,$F8,$FC   ;NOP $FCF8,X
-        INC fFEFF,X
-        INC fFFFE,X  ;IRQ
-        BRK 
-        INC fFEFE,X
-        INC fFEFE,X
-        ROR f7E3E,X
-        INC fFEFE,X
-        INC fFEFE,X
-        NOP 
-        NOP 
+        .BYTE $EA,$55
+f7622   .BYTE $EA,$FB,$FB,$FB,$00,$BF,$BF,$BF
+        .BYTE $00,$FF,$00,$FF,$FF,$AA,$55,$AA
+        .BYTE $55,$00,$FF,$D5,$AB,$FF,$AB,$D5
+        .BYTE $FF,$00,$7F,$7F,$7F,$7F,$7F
+s7643   =*+$02
+        .BYTE $7F,$00,$C6
+        .BYTE $71,$F0,$D4,$60,$EA,$EA,$EA,$7E
+        .BYTE $81,$BD,$A1,$A1,$BD,$81,$7E,$00
+        .BYTE $FF,$87,$87
+        .BYTE $FF,$FF,$FE
+        .BYTE $FC,$F8,$FC
+        .BYTE $FE,$FF,$FE,$FE,$FE,$FF,$00,$FE
+        .BYTE $FE,$FE,$FE,$FE,$FE,$7E,$3E,$7E
+        .BYTE $FE,$FE,$FE,$FE,$FE,$FE,$EA
+        NOP
 s7675   JSR s75E7
         LDX #$E9
 b767A   LDA f7787,X
         STA f21BF,X
-        DEX 
+        DEX
         BNE b767A
         LDA #<p8B88
         STA a07F8
@@ -695,43 +391,43 @@ b767A   LDA f7787,X
         LDA #$89
         LDY #$04
 b7691   STA f07FA,Y
-        DEY 
+        DEY
         BNE b7691
-        RTS 
+        RTS
 
 s7698   LDA #$40
         LDY #$08
 j769C   STY a64
         CPX a64
         BEQ b76A8
-        LSR 
-        DEY 
-        DEY 
+        LSR
+        DEY
+        DEY
         JMP j769C
 
 b76A8   STA a64
-        RTS 
+        RTS
 
 j76AB   LDA a7E
         CMP a55
         JMP j7DA2
 
 j76B2   LDA aDC01    ;CIA1: Data Port Register B
-        LSR 
+        LSR
         BCS b76BB
         JSR s76EC
-b76BB   LSR 
-        LSR 
-        PHA 
+b76BB   LSR
+        LSR
+        PHA
         BCS b76C3
         JSR s76DF
-b76C3   PLA 
-        LSR 
-        PHA 
+b76C3   PLA
+        LSR
+        PHA
         BCS b76CB
         JSR s76D2
-b76CB   PLA 
-        LSR 
+b76CB   PLA
+        LSR
         BCS b76DE
         JMP j7BF9
 
@@ -740,18 +436,18 @@ s76D2   LDA #$01
         LDA #$87
         STA a07F8
         INC aD000    ;Sprite 0 X Pos
-b76DE   RTS 
+b76DE   RTS
 
 s76DF   LDA #$00
         STA a7A
         LDA #$88
         STA a07F8
         DEC aD000    ;Sprite 0 X Pos
-        RTS 
+        RTS
 
 s76EC   JMP j7B86
 
-j76EF   PHA 
+j76EF   PHA
 b76F0   LDA a7A
         BEQ b76FA
         JSR s7A02
@@ -766,25 +462,27 @@ j76FD   LDX #$79
         BNE b76F0
         LDA #$00
         STA aFE
-        PLA 
-        RTS 
+        PLA
+        RTS
 
-        NOP 
+        NOP
+
+; ;--------
 s7711   LDA #$00
-        TAX 
+        TAX
 b7714   STA f2242,X
-        DEX 
+        DEX
         BNE b7714
 b771A   LDA f7871,Y
         STA f22BF,Y
-        DEY 
+        DEY
         BNE b771A
-        RTS 
+        RTS
 
 s7724   LDA a7C
         BEQ b772B
         DEC a7C
-b772A   RTS 
+b772A   RTS
 
 b772B   LDA #$00
         STA a78
@@ -804,20 +502,20 @@ b772B   LDA #$00
 b774C   LDA #$64
         STA a7C
         STA a78
-        RTS 
+        RTS
 
 s7753   CPX #$00
         BEQ b7759
         LDX #$13
 b7759   JSR s7724
         JSR s80E8
-        NOP 
+        NOP
 s7760   LDA aD000    ;Sprite 0 X Pos
 a7764   =*+$01
         CMP #$F0
         BCC b776B
         DEC aD000    ;Sprite 0 X Pos
-b776A   RTS 
+b776A   RTS
 
 b776B   LDX #$13
         STX a79
@@ -835,58 +533,35 @@ s7776   LDA #$23
 f7787   =*+$02
         JMP j7F39
 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        PLP 
-        BRK 
-        BRK 
+        .BYTE $00,$00,$00,$00,$28,$00,$00,$BE
+        .BYTE $00,$02,$FF,$80,$02,$F9,$80,$02
+        .BYTE $F9,$80,$02,$FE,$80,$02,$BF,$80
+        .BYTE $0B,$EB,$60,$0B,$FE,$60,$0B,$BF
+        .BYTE $60
+        .BYTE $0B,$BE
+        .BYTE $80,$09
+        .BYTE $7B,$E0,$09
+        .BYTE $6F,$E0,$02
+        .BYTE $7B,$E0,$0B
+        .BYTE $E2,$E0
+        .BYTE $0B,$82
+        .BYTE $80,$0A
+        .BYTE $02
+        .BYTE $A0,$0A
+        .BYTE $02
+        .BYTE $A0,$00,$00,$00,$00,$00
+        BRK #$32
+        BRK #$00
+        BRK #$00
+        PLP
+        BRK #$00
         LDX f0200,Y
-        .BYTE $FF,$80,$02   ;ISC f0280,X
-        SBC f0280,Y
-        SBC f0280,Y
-        INC f0280,X
-        .BYTE $BF,$80,$0B   ;LAX a0B80,Y
-        .BYTE $EB,$60       ;SBC #$60
-        .BYTE $0B,$FE       ;ANC #$FE
-        RTS 
-
-        .BYTE $0B,$BF       ;ANC #$BF
-        RTS 
-
-        .BYTE $0B,$BE       ;ANC #$BE
-        .BYTE $80,$09       ;NOP #$09
-        .BYTE $7B,$E0,$09   ;RRA $09E0,Y
-        .BYTE $6F,$E0,$02   ;RRA f02E0
-        .BYTE $7B,$E0,$0B   ;RRA f0BE0,Y
-        .BYTE $E2,$E0       ;NOP #$E0
-        .BYTE $0B,$82       ;ANC #$82
-        .BYTE $80,$0A       ;NOP #$0A
-        .BYTE $02           ;JAM 
-        LDY #$0A
-        .BYTE $02           ;JAM 
-        LDY #$00
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        .BYTE $32           ;JAM 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        PLP 
-        BRK 
-        BRK 
-        LDX f0200,Y
-        .BYTE $FF,$80,$02   ;ISC f0280,X
-        .BYTE $6F,$80,$02   ;RRA f0280
-        .BYTE $6F,$80,$02   ;RRA f0280
-        .BYTE $BF,$80,$02   ;LAX f0280,Y
+        .BYTE $FF,$80,$02
+        .BYTE $6F,$80,$02
+        .BYTE $6F,$80,$02
+        .BYTE $BF,$80,$02
         INC f0980,X
-        .BYTE $EB,$E0       ;SBC #$E0
+        .BYTE $EB,$E0
         ORA #$BF
         CPX #$09
         INC f02E0,X
@@ -894,123 +569,102 @@ f7787   =*+$02
         SBC a0B60
         SBC a0B60,Y
         SBC a0B80
-        .BYTE $8B,$E0       ;XAA #$E0
-        .BYTE $02           ;JAM 
-        .BYTE $82,$E0       ;NOP #$E0
-        ASL 
-        .BYTE $80,$A0       ;NOP #$A0
-        ASL 
-        .BYTE $80,$A0       ;NOP #$A0
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        SEC 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
+        .BYTE $8B,$E0
+        .BYTE $02
+        .BYTE $82,$E0
+        ASL
+        .BYTE $80,$A0
+        ASL
+        .BYTE $80,$A0
+        BRK #$00
+        BRK #$00
+        BRK #$00
+        SEC
+        BRK #$00
+        BRK #$00
         JSR ~e0000
-        TAY 
-        BRK 
-        .BYTE $02           ;JAM 
+        TAY
+        BRK #$02
         DEC a0A00
-        .BYTE $32           ;JAM 
-        .BYTE $80,$0A       ;NOP #$0A
+        .BYTE $32
+        .BYTE $80,$0A
         DEC a0A80
-        TAX 
-        .BYTE $80,$0A       ;NOP #$0A
-        TAX 
-        .BYTE $80,$00       ;NOP #$00
-        .BYTE $54,$00       ;NOP f00,X
-        .BYTE $02           ;JAM 
-        TAX 
-        BRK 
-        BRK 
-        .BYTE $54,$00       ;NOP f00,X
-        .BYTE $02           ;JAM 
-        TAX 
-        BRK 
-        BRK 
-        .BYTE $54,$00       ;NOP f00,X
-        TAX 
-        TAX 
-        TAY 
-        .BYTE $9F,$DF,$D8   ;AHX $D8DF,Y
-        .BYTE $2F,$FF,$E0   ;RLA $E0FF
-        .BYTE $2F,$FF,$E0   ;RLA $E0FF
-        .BYTE $0B,$FF       ;ANC #$FF
-        .BYTE $80,$02       ;NOP #$02
+        TAX
+        .BYTE $80,$0A
+        TAX
+        .BYTE $80,$00
+        .BYTE $54,$00
+        .BYTE $02
+        TAX
+        BRK #$00
+        .BYTE $54,$00
+        .BYTE $02
+        TAX
+        BRK #$00
+        .BYTE $54,$00
+        TAX
+        TAX
+        TAY
+        .BYTE $9F,$DF,$D8
+        .BYTE $2F,$FF,$E0
+        .BYTE $2F,$FF,$E0
+        .BYTE $0B,$FF
+        .BYTE $80,$02
         DEC ~e0000,X
-        TAY 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        .BYTE $32           ;JAM 
-        .BYTE $07,$80       ;SLO a80
-        BRK 
-        .BYTE $1F,$E0,$00   ;SLO ~$00E0,X
-        .BYTE $3F,$F0,$00   ;RLA ~$00F0,X
-        .BYTE $7F,$F8,$00   ;RRA ~$00F8,X
-        .BYTE $7F,$F8,$00   ;RRA ~$00F8,X
-        .BYTE $FF,$FC,$00   ;ISC ~$00FC,X
-        .BYTE $FF,$FC,$00   ;ISC ~$00FC,X
-        .BYTE $FF,$FC,$00   ;ISC ~$00FC,X
-        .BYTE $FF,$FC,$00   ;ISC ~$00FC,X
-        .BYTE $7F,$F8,$00   ;RRA ~$00F8,X
-        .BYTE $7F,$F8,$00   ;RRA ~$00F8,X
-        .BYTE $3F,$F0,$00   ;RLA ~$00F0,X
-        .BYTE $1F,$E0,$00   ;SLO ~$00E0,X
-        .BYTE $07,$80       ;SLO a80
-f7871   .BYTE $FF,$FF,$FF   ;ISC $FFFF,X
-        .BYTE $FF,$00,$00   ;ISC ~e0000,X
-        BRK 
-        .BYTE $FF,$FF,$FF   ;ISC $FFFF,X
-        .BYTE $FF,$FF,$FF   ;ISC $FFFF,X
-        EOR f55,X
-        EOR fAA,X
-        TAX 
-        TAX 
-        EOR f55,X
-        EOR fAA,X
-        TAX 
-f7889   TAX 
-        .BYTE $04,$00       ;NOP a00
-        BRK 
-        .BYTE $04,$00       ;NOP a00
-        BRK 
-        ASL ~e0000
-        ASL ~e0000
-        .BYTE $3F,$80,$00   ;RLA ~$0080,X
-        .BYTE $FF,$E0,$00   ;ISC ~$00E0,X
-        .BYTE $3F,$80,$00   ;RLA ~$0080,X
-        ASL ~e0000
-        ASL ~e0000
-        .BYTE $04,$00       ;NOP a00
-        BRK 
-s78A9   =*+$01
-        .BYTE $04,$4A       ;NOP a4A
-        LSR 
-        LSR 
-        LSR 
-        RTS 
+        TAY
+        BRK #$00
+        BRK #$00
+        .BYTE $32
+        .BYTE $07,$80
+        BRK #$1F
+        CPX #$00
+        .BYTE $3F,$F0,$00
+        .BYTE $7F,$F8,$00
+        .BYTE $7F,$F8,$00
+        .BYTE $FF,$FC,$00
+        .BYTE $FF,$FC,$00
+        .BYTE $FF,$FC,$00
+        .BYTE $FF,$FC,$00
+        .BYTE $7F,$F8,$00
+        .BYTE $7F,$F8,$00
+        .BYTE $3F,$F0,$00
+        .BYTE $1F,$E0,$00
+        .BYTE $07,$80
 
+; some data copied to 22c0
+f7871   .BYTE $FF,$FF,$FF,$FF,$00,$00,$00,$FF
+        .BYTE $FF,$FF,$FF,$FF,$FF,$55,$55,$55
+        .BYTE $AA,$AA,$AA,$55,$55,$55,$AA,$AA
+
+; some data copied to 230a
+f7889   .BYTE $AA,$04,$00,$00,$04,$00,$00,$0E
+        .BYTE $00,$00,$0E,$00,$00,$3F,$80,$00
+        .BYTE $FF,$E0,$00,$3F,$80,$00,$0E,$00
+        .BYTE $00,$0E,$00,$00,$04,$00,$00
+s78A9   =*+$01
+        .BYTE $04,$4A
+        LSR
+        LSR
+        LSR
+        RTS
+
+
+; --------
 s78AE   LDY #$18
         JSR s7711
         LDY #$1F
 b78B5   LDA f7889,Y
         STA f2309,Y
-        DEY 
+        DEY
         BNE b78B5
         LDA #$8C
         STA f07FA
         LDA #$8A
         STA a07FF
-        RTS 
+        RTS
 
+
+; --------
 j78C9   STA a84
         LDA a7A
         STA a85
@@ -1023,7 +677,7 @@ j78C9   STA a84
         STA aD407    ;Voice 2: Frequency Control - Low-Byte
         LDA #$09
         STA aD40C    ;Voice 2: Attack / Decay Cycle Control
-        RTS 
+        RTS
 
 j78E7   JSR eE544
         LDA #$E0
@@ -1031,9 +685,9 @@ j78E7   JSR eE544
         JSR s7FD8
         JMP j8084
 
-        NOP 
-        NOP 
-        NOP 
+        NOP
+        NOP
+        NOP
 j78F8   JSR j7DC8
         INC a7B
         INC a84
@@ -1044,16 +698,16 @@ s7905   JSR eE544
         LDA #$41
         LDY #$04
 b790C   STA f0406,Y
-        DEY 
+        DEY
         BNE b790C
         LDA #$03
         STA aFB
-        RTS 
+        RTS
 
-        RTS 
+        RTS
 
 s7918   LDA aD003    ;Sprite 1 Y Pos
-        SEC 
+        SEC
         SBC #$13
         CMP fD001    ;Sprite 0 Y Pos
         BNE b792C
@@ -1062,7 +716,7 @@ s7918   LDA aD003    ;Sprite 1 Y Pos
         CMP #$1E
         BCS b792F
 b792C   INC aD000    ;Sprite 0 X Pos
-b792F   RTS 
+b792F   RTS
 
 s7932   =*+$02
 j7930   JSR s7776
@@ -1078,7 +732,7 @@ j7942   LDY a76
         INC a76
         LDA (p73),Y
         BEQ b796E
-        CLC 
+        CLC
         ADC aFB
         STA aFB
         LDA aFC
@@ -1087,7 +741,7 @@ j7942   LDY a76
         JSR s797E
         JSR s7562
         JSR s797E
-        SEC 
+        SEC
         LDA aFB
         SBC #$28
         STA aFB
@@ -1108,9 +762,9 @@ s7973   LDA #$B4
 s797E   LDY #$04
         LDA #$41
 b7982   STA (pFB),Y
-        DEY 
+        DEY
         BNE b7982
-        RTS 
+        RTS
 
 b7988   LDX a79
         BNE b7990
@@ -1132,38 +786,38 @@ b7993   LDX a79
 j79AE   LDX #$13
         JSR s7918
         STX a79
-        RTS 
+        RTS
 
 s79B6   LDA #<p03B0
         STA aFB
         LDA #>p03B0
         STA aFC
         LDA fD001,X  ;Sprite 0 Y Pos
-        SEC 
+        SEC
         SBC #$2F
-        LSR 
-        LSR 
-        LSR 
-        CLC 
+        LSR
+        LSR
+        LSR
+        CLC
         ADC #$02
         STA a77
         LDY #$28
-b79CE   CLC 
+b79CE   CLC
         LDA a77
         ADC aFB
         STA aFB
         LDA aFC
         ADC #$00
         STA aFC
-        DEY 
+        DEY
         BNE b79CE
         LDA aD000,X  ;Sprite 0 X Pos
-        SEC 
+        SEC
         SBC #$1C
-        LSR 
-        LSR 
-        LSR 
-        CLC 
+        LSR
+        LSR
+        LSR
+        CLC
         ADC aFB
         STA aFB
         LDA aFC
@@ -1175,38 +829,38 @@ b79CE   CLC
         LDA (pFB),Y
         CMP #$47
         BEQ b7A71
-        NOP 
+        NOP
 b79FF   JMP j7B34
 
 s7A02   CPY #$10
         BCS b7A0D
         INC aD000    ;Sprite 0 X Pos
         DEC fD001    ;Sprite 0 Y Pos
-        RTS 
+        RTS
 
 b7A0D   CPY #$18
         BCS b7A15
         INC aD000    ;Sprite 0 X Pos
-        RTS 
+        RTS
 
 b7A15   INC fD001    ;Sprite 0 Y Pos
         INC aD000    ;Sprite 0 X Pos
-        RTS 
+        RTS
 
 s7A1C   CPY #$10
         BCS b7A27
         DEC aD000    ;Sprite 0 X Pos
         DEC fD001    ;Sprite 0 Y Pos
-        RTS 
+        RTS
 
 b7A27   CPY #$18
         BCS b7A2F
         DEC aD000    ;Sprite 0 X Pos
-        RTS 
+        RTS
 
 b7A2F   DEC aD000    ;Sprite 0 X Pos
         INC fD001    ;Sprite 0 Y Pos
-b7A35   RTS 
+b7A35   RTS
 
 j7A36   LDA a79
         BEQ b7A35
@@ -1237,7 +891,7 @@ b7A67   INC a81
 
 b7A71   JMP j76AB
 
-        NOP 
+        NOP
 s7A75   JSR s7753
         LDA fD001    ;Sprite 0 Y Pos
         CMP #$E0
@@ -1253,18 +907,18 @@ b7A82   CMP #$1E
         LDA #$03
         STA a77
         LDY a76
-        INY 
+        INY
         CPY #$0A
         BCC b7B0A
 j7A9A   LDA (p73),Y
         BEQ b7AAA
-b7A9E   DEY 
+b7A9E   DEY
         JMP j7A9A
 
-j7AA2   NOP 
+j7AA2   NOP
         STY a76
-        NOP 
-        NOP 
+        NOP
+        NOP
         JMP j7A4C
 
 b7AAA   DEC a77
@@ -1282,7 +936,7 @@ j7AB8   LDA #$57
 b7AC0   LDY a7E
         INC a7E
         LDA (p73),Y
-        CLC 
+        CLC
         ADC aFB
         STA aFB
         LDA aFC
@@ -1292,47 +946,47 @@ b7AC0   LDY a7E
         LDY #$00
         LDA #$47
         STA (pFB),Y
-        INY 
+        INY
         LDA #$49
         STA (pFB),Y
         LDY #$28
         LDA #$48
         STA (pFB),Y
-        INY 
+        INY
         LDA #$4A
         STA (pFB),Y
         DEC aFE
         BNE b7AC0
-b7AEE   RTS 
+b7AEE   RTS
 
 s7AEF   JSR s7B0D
         LDY #$00
         LDX a7B
-        INX 
-        TXA 
+        INX
+        TXA
 s7AF8   STA (p7F),Y
-        INY 
+        INY
         STA (p7F),Y
-        PHA 
-        CLC 
-        TYA 
+        PHA
+        CLC
+        TYA
         ADC #$27
-        TAY 
-        PLA 
+        TAY
+        PLA
         STA (p7F),Y
-        INY 
+        INY
         STA (p7F),Y
-        RTS 
+        RTS
 
 b7B0A   JMP j78E7
 
 s7B0D   LDA aFB
         STA a7F
-        CLC 
+        CLC
         LDA aFC
         ADC #$D4
         STA a80
-        RTS 
+        RTS
 
 j7B19   LDA a7B
         JSR s7AF8
@@ -1345,7 +999,7 @@ s7B23   LDA #$00
         CPY #$10
         BEQ b7B30
         JSR s7B7B
-b7B30   CLC 
+b7B30   CLC
         JMP j7D16
 
 j7B34   CPX #$07
@@ -1357,49 +1011,49 @@ j7B3E   LDY #$03
 b7B42   LDA (pFB),Y
         CMP #$41
         BNE b7B49
-        DEX 
-b7B49   DEY 
+        DEX
+b7B49   DEY
         BNE b7B42
-        RTS 
+        RTS
 
 j7B4D   LDA #$41
         LDY #$03
-        NOP 
-        NOP 
+        NOP
+        NOP
 b7B53   STA (pFB),Y
-        DEY 
+        DEY
         CPY #$01
         BNE b7B53
         JSR s7562
-        DEX 
+        DEX
         BNE j7B4D
         JMP j7B3E
 
 j7B63   LDY a7E
-        INY 
-        INY 
-        TYA 
-        LSR 
-        LSR 
-        LSR 
-        TAY 
-        INY 
+        INY
+        INY
+        TYA
+        LSR
+        LSR
+        LSR
+        TAY
+        INY
         CPY a7B
         JMP j7D27
 
-        NOP 
-j7B73   SEC 
+        NOP
+j7B73   SEC
         LDA a7E
         SBC #$08
         STA a7E
-        RTS 
+        RTS
 
 s7B7B   LDA #$41
         LDY #$04
 b7B7F   STA f07C6,Y
-        DEY 
+        DEY
         BNE b7B7F
-b7B85   RTS 
+b7B85   RTS
 
 j7B86   LDY aD000    ;Sprite 0 X Pos
         CPY #$2D
@@ -1420,18 +1074,18 @@ b7BA1   LDA f27,X
 b7BA7   LDA f27,X
         BNE b7BAF
         INC aD000,X  ;Sprite 0 X Pos
-        RTS 
+        RTS
 
 b7BAF   DEC aD000,X  ;Sprite 0 X Pos
-        RTS 
+        RTS
 
 j7BB3   LDA fD001,X  ;Sprite 0 Y Pos
         CMP #$32
         BCC b7BCF
         CMP #$F0
         BCS b7BCF
-        NOP 
-        NOP 
+        NOP
+        NOP
         JSR s79B6
         LDY #$01
         LDA (pFB),Y
@@ -1445,16 +1099,16 @@ b7BCF   LDA f28,X
 b7BD5   LDA f28,X
         BNE b7BDD
         INC fD001,X  ;Sprite 0 Y Pos
-        RTS 
+        RTS
 
 b7BDD   DEC fD001,X  ;Sprite 0 Y Pos
-        RTS 
+        RTS
 
 j7BE1   LDX #$05
 b7BE3   LDY #$DC
-b7BE5   DEY 
+b7BE5   DEY
         BNE b7BE5
-        DEX 
+        DEX
         BNE b7BE3
         JSR s7D5D
         JMP j7C28
@@ -1462,8 +1116,8 @@ b7BE5   DEY
 s7BF1   JSR s81B4
         JMP j8170
 
-        NOP 
-        NOP 
+        NOP
+        NOP
 j7BF9   LDA a84
         BNE b7C20
         LDA aD000    ;Sprite 0 X Pos
@@ -1482,11 +1136,11 @@ b7C16   LDA a85
         BEQ b7C21
         INC aD004    ;Sprite 2 X Pos
         INC aD004    ;Sprite 2 X Pos
-b7C20   RTS 
+b7C20   RTS
 
 b7C21   DEC aD004    ;Sprite 2 X Pos
         DEC aD004    ;Sprite 2 X Pos
-b7C27   RTS 
+b7C27   RTS
 
 j7C28   LDA aD004    ;Sprite 2 X Pos
         BEQ b7C38
@@ -1499,12 +1153,12 @@ b7C35   JMP j7E3D
 b7C38   LDA a84
         BEQ b7C27
         DEC a84
-        RTS 
+        RTS
 
 s7C3F   LDX #$14
         LDA #$00
 b7C43   STA fD3FF,X
-        DEX 
+        DEX
         BNE b7C43
         LDA #$0F
         STA aD418    ;Select Filter Mode and Volume
@@ -1515,11 +1169,11 @@ b7C43   STA fD3FF,X
         STA a0315    ;IRQ
         LDA #<p7C61
         STA a0314    ;IRQ
-        RTS 
+        RTS
 
-p7C61   PHA 
-        TYA 
-        PHA 
+p7C61   PHA
+        TYA
+        PHA
         LDA a89
         BNE b7C8A
 a7C69   =*+$01
@@ -1529,16 +1183,16 @@ a7C69   =*+$01
         LDA (p87),Y
         BEQ b7C8F
         STA aD401    ;Voice 1: Frequency Control - High-Byte
-        INY 
+        INY
         LDA (p87),Y
         STA aD400    ;Voice 1: Frequency Control - Low-Byte
         INC a86
         INC a86
         LDA #$0C
         STA a89
-j7C84   PLA 
-        TAY 
-        PLA 
+j7C84   PLA
+        TAY
+        PLA
         JMP eEA31
 
 b7C8A   DEC a89
@@ -1565,9 +1219,9 @@ s7C96   LDA #$01
         LDA #$30
         LDY #$05
 b7CBB   STA f04E8,Y
-        DEY 
+        DEY
         BNE b7CBB
-        RTS 
+        RTS
 
 j7CC2   LDY #$24
         LDA a2B
@@ -1576,8 +1230,10 @@ j7CC2   LDY #$24
         JSR eE50C
         LDA a2C
         LDX a2B
+
+; print number from AX
         JSR eBDCD
-        RTS 
+        RTS
 
 s7CD6   LDX a2C
         BEQ b7CF0
@@ -1590,47 +1246,40 @@ s7CD6   LDX a2C
         BCS b7CFF
 b7CE8   CMP #$E8
         BCC b7CED
-        DEY 
-b7CED   DEY 
-        DEY 
-        RTS 
+        DEY
+b7CED   DEY
+        DEY
+        RTS
 
 b7CF0   CMP #$0A
         BCC b7CFA
         CMP #$64
         BCC b7CF9
-        DEY 
-b7CF9   DEY 
-b7CFA   RTS 
+        DEY
+b7CF9   DEY
+b7CFA   RTS
 
 b7CFB   CMP #$0F
         BCC b7D00
-b7CFF   DEY 
-b7D00   DEY 
-        DEY 
-        DEY 
-        RTS 
+b7CFF   DEY
+b7D00   DEY
+        DEY
+        DEY
+        RTS
 
-        BVC b7D47
-        JMP e4B4B
-
-        EOR #$4F
-        BRK 
-        EOR a4E
-        EOR a52
-        .BYTE $47,$49       ;SRE $49
-        EOR (p00,X)
-        NOP 
-        NOP 
+        .TEXT "PALKKIO"
+        .BYTE $00
+        .TEXT "ENERGIA"
+        .BYTE $00,$EA,$EA
 j7D16   LDA a7E
         ADC #$08
         STA a7E
 s7D1C   LDA a7B
 s7D1E   LDY #$04
 b7D20   STA fDBC6,Y
-        DEY 
+        DEY
         BNE b7D20
-        RTS 
+        RTS
 
 j7D27   BCS b7D2F
         JSR s7973
@@ -1648,15 +1297,15 @@ b7D3E   LDY #$28
 b7D40   LDA (pFB),Y
         CMP #$42
         BEQ b7D50
-j7D46   DEY 
-b7D47   BNE b7D40
+j7D46   DEY
+        BNE b7D40
         JSR s7562
-        DEX 
+        DEX
         BNE b7D3E
-        RTS 
+        RTS
 
 b7D50   JSR s7B0D
-        SEC 
+        SEC
         LDA #$10
         SBC a7B
         STA (p7F),Y
@@ -1677,7 +1326,7 @@ s7D5D   LDY aD01E    ;Sprite to Sprite Collision Detect
 j7D77   STA a71
         JMP j7B90
 
-        NOP 
+        NOP
 b7D7D   JSR s7E25
 j7D80   JSR s8026
         INC a2B
@@ -1695,7 +1344,7 @@ s7D96   LDA #$00
         STA aD408    ;Voice 2: Frequency Control - High-Byte
         STA aD407    ;Voice 2: Frequency Control - Low-Byte
         STA aD40B    ;Voice 2: Control Register
-        RTS 
+        RTS
 
 j7DA2   BCS b7DA7
         JMP j7A5E
@@ -1714,30 +1363,32 @@ b7DB8   JSR s7E3F
 b7DBE   JSR b7D7D
         JMP b7DAA
 
-        NOP 
+        NOP
+
+;  initialise screen and keyboard
 s7DC5   JSR eE544
 j7DC8   JSR s7C96
         JSR j7CC2
         JMP j7DD9
 
-        NOP 
-        NOP 
+        NOP
+        NOP
 j7DD3   JSR s7B7B
         JSR s7D1C
 j7DD9   LDY #$07
         LDA #$20
 b7DDD   STA f078F,Y
-        DEY 
+        DEY
         BNE b7DDD
         LDA a2D
-        CLC 
+        CLC
         ADC #$20
         JSR s78A9
-        LSR 
-        TAY 
+        LSR
+        TAY
         LDA #$44
 b7DEF   STA f078F,Y
-        DEY 
+        DEY
         BNE b7DEF
         JSR s7D96
         LDA #$21
@@ -1748,9 +1399,9 @@ b7DEF   STA f078F,Y
         STA aD407    ;Voice 2: Frequency Control - Low-Byte
         LDY #$64
         STY aD40C    ;Voice 2: Attack / Decay Cycle Control
-b7E0C   DEY 
+b7E0C   DEY
         BNE b7E0C
-b7E0F   RTS 
+b7E0F   RTS
 
 s7E10   LDX #$00
         JSR s7E49
@@ -1761,9 +1412,10 @@ s7E10   LDX #$00
         LDX #$02
         JMP s7E49
 
-        DEX 
-        BRK 
-s7E25   LDA #$F2
+        DEX
+s7E25   =*+$01
+        BRK #$A9
+        .BYTE $F2
         STA aD004,X  ;Sprite 2 X Pos
         LDA #$C8
         STA f37,X
@@ -1774,35 +1426,34 @@ s7E25   LDA #$F2
         LDA aD015    ;Sprite display Enable
         AND a64
 j7E3D   =*+$01
-f7E3E   =*+$02
         STA aD015    ;Sprite display Enable
 s7E3F   LDA #$00
         STA aD004    ;Sprite 2 X Pos
         LDA #$14
         STA a84
-        RTS 
+        RTS
 
 s7E49   STX a72
         LDX #$08
         LDA #$42
 b7E4F   EOR #$06
-        PHA 
+        PHA
         ORA a72
         STA a46
-        PLA 
+        PLA
         CPY a46
         BEQ b7E62
-        LSR 
-        DEX 
-        DEX 
+        LSR
+        DEX
+        DEX
         BNE b7E4F
-        SEC 
-        RTS 
+        SEC
+        RTS
 
-b7E62   CLC 
-        RTS 
+b7E62   CLC
+        RTS
 
-        NOP 
+        NOP
 s7E65   LDA #$28
         STA a55
         LDA #$DF
@@ -1810,66 +1461,45 @@ s7E65   LDA #$28
         LDA #$01
         STA a0286
         JSR s78AE
+
+; set color at $286 and call clear screen
         JSR eE544
         JSR s7550
         JSR s7675
         JSR s7C3F
-f7E81   LDY #$0A
+        LDY #$0A
         LDX #$0A
+
+; read/set XY cursor position (why is this needed at all)
         JSR eE50C
         LDY #$7E
         LDA #$90
+
+; print string from ay
         JMP eAB1E
 
-        NOP 
-        ORA a4B
-        .BYTE $4F,$53,$54   ;SRE $5453
-        EOR (p4A,X)
-        EOR (p11,X)
-        ORA (p9D),Y
+        .BYTE $EA,$05
+        .TEXT "KOSTAJA"
+        .BYTE $11,$11,$9D,$9D,$9D,$9D,$9D,$9D
+        .BYTE $9D,$9D,$9D,$9D,$9D,$9D,$9D,$9E
+        .BYTE $C6,$20,$31,$39,$38
+        .BYTE $37,$20
+        .TEXT "TAPANI & PASI"
+        .BYTE $11,$11,$9D,$9D,$9D
         STA f9D9D,X
-        STA f9D9D,X
-        STA f9D9D,X
-        STA f9D9D,X
-        .BYTE $9E,$C6,$20   ;STX $20C6,Y
-        AND (p39),Y
-        SEC 
-        .BYTE $37,$20       ;RLA f20,X
-        .BYTE $54,$41       ;NOP $41,X
-        BVC b7EF4
-        LSR a2049
-        ROL a20
-        BVC b7EFB
-        .BYTE $53,$49       ;SRE ($49),Y
-        ORA (p11),Y
-        STA f9D9D,X
-        STA f9D9D,X
-        STA f9D9D,X
-        STA f9D9D,X
-        STA f9D9D,X
-        STX f46,Y
-        .BYTE $37,$20       ;RLA f20,X
-        AND a4550
-        JMP e1149
-
-        ORA (p9D),Y
-        STA f9D9D,X
-        STA f9D9D,X
-        STA f469B,X
-        .BYTE $33,$20       ;RLA (p20),Y
-        AND a554D
-        .BYTE $53,$49       ;SRE ($49),Y
-        EOR #$4B
-        .BYTE $4B,$49       ;ALR #$49
-        BRK 
-        NOP 
-        NOP 
+        .BYTE $9D,$9D,$9D,$9D,$9D,$9D,$9D,$9D
+        .BYTE $9D,$96
+        .TEXT "F7 -PELI"
+        .BYTE $11,$11,$9D,$9D,$9D,$9D,$9D,$9D
+        .BYTE $9D,$9D,$9B
+        .TEXT "F3 -MUSIIKKI"
+        .BYTE $00,$EA
+        .BYTE $EA
 j7EF0   LDY #$64
         LDA #$00
 b7EF4   STA f002C,Y
-        DEY 
+        DEY
         BNE b7EF4
-b7EFB   =*+$01
         LDA #>p7359
         STA a88
         LDA #<p7359
@@ -1877,7 +1507,9 @@ b7EFB   =*+$01
         JSR s7E65
         LDA #$6B
         STA aD403    ;Voice 1: Pulse Waveform Width - High-Nybble
-        NOP 
+        NOP
+
+; main menu
 b7F0B   LDA aCB
         CMP #$03
         BNE b7F1A
@@ -1896,9 +1528,9 @@ b7F27   LDA #$41
 b7F29   STA a7C69
         LDX #$C8
 b7F2E   LDY #$C8
-b7F30   DEY 
+b7F30   DEY
         BNE b7F30
-        DEX 
+        DEX
         BNE b7F2E
         JMP b7F0B
 
@@ -1913,14 +1545,16 @@ j7F39   BCC b7F49
 b7F49   CMP #$00
         BEQ b7F50
 b7F4D   STX aD015    ;Sprite display Enable
-b7F50   RTS 
+b7F50   RTS
 
-j7F51   NOP 
-        NOP 
-        NOP 
-        NOP 
+j7F51   NOP
+        NOP
+        NOP
+        NOP
         JMP j78F8
 
+
+; entrypoint
 j7F58   LDA #$80
         STA a0291
         LDA #>j7F58
@@ -1928,38 +1562,21 @@ j7F58   LDA #$80
         LDA #<j7F58
         STA a0300
         LDX #$30
+
+; copies data from 7f75 to d000
 b7F69   LDA f7F74,X
         STA fCFFF,X
-        DEX 
+        DEX
         BNE b7F69
 f7F74   =*+$02
         JMP j7EF0
 
-        LDY fE1,X
-        .BYTE $1F,$00,$00   ;SLO ~e0000,X
-        BRK 
-        .BYTE $EB,$DD       ;SBC #$DD
-        .BYTE $EB,$B5       ;SBC #$B5
-        .BYTE $EB,$8D       ;SBC #$8D
-        .BYTE $EB,$65       ;SBC #$65
-        INC ~a003C
-        .BYTE $1B,$69,$8E   ;SLO $8E69,Y
-        INC aC8FF
-        BRK 
-        .BYTE $13,$79       ;SLO (p79),Y
-        BEQ b7F92
-b7F92   =*+$01
-        .BYTE $FB,$00,$00   ;ISC e0000,Y
-        BRK 
-        BRK 
-        BRK 
-        ORA (p02,X)
-        .BYTE $03,$04       ;SLO (p04,X)
-        .BYTE $07,$00       ;SLO a00
-        .BYTE $07,$01       ;SLO a01
-        ORA (p02,X)
-        .BYTE $03,$04       ;SLO (p04,X)
-        ORA aFF
+        .BYTE $B4,$E1,$1F,$00,$00,$00,$EB,$DD
+        .BYTE $EB,$B5,$EB,$8D,$EB,$65,$EE,$3C
+        .BYTE $00,$1B,$69,$8E,$EE,$FF,$C8,$00
+        .BYTE $13,$79,$F0,$01,$FB,$00,$00,$00
+        .BYTE $00,$00,$01,$02,$03,$04,$07,$00
+        .BYTE $07,$01,$01,$02,$03,$04,$05,$FF
 s7FA5   LDA #>p07A6
         STA aA7
         LDA #<p07A6
@@ -1977,16 +1594,16 @@ b7FB7   LDY aA8
         BEQ b7FC7
         DEC aA8
         BNE b7FB7
-b7FC7   SEC 
+b7FC7   SEC
         LDA aA6
         SBC #$28
         STA aA6
         LDA aA7
         SBC #$00
         STA aA7
-        DEX 
+        DEX
         BNE b7FAF
-        RTS 
+        RTS
 
 s7FD8   LDA #>p0718
         STA a8067
@@ -2000,33 +1617,33 @@ s7FD8   LDA #>p0718
         LDA #$01
         STA aD01B    ;Sprite to Background Display Priority
         STA aD015    ;Sprite display Enable
-        RTS 
+        RTS
 
 s7FF8   JSR s7AB1
         JSR s7760
         LDA aD000    ;Sprite 0 X Pos
         CMP #$AA
         BCS b8006
-b8005   RTS 
+b8005   RTS
 
 b8006   LDA a55
-        SEC 
+        SEC
         SBC #$28
         CMP a7E
         BCS b8005
-        CLC 
+        CLC
         LDA a7E
         ADC #$28
         STA a55
         LDA a7E
-        NOP 
+        NOP
         STA a57
 b801B   JSR s7BF1
         DEC a57
         BNE b801B
         JMP j81C4
 
-        NOP 
+        NOP
 s8026   JSR s7D96
         LDA #$81
         STA aD40B    ;Voice 2: Control Register
@@ -2036,7 +1653,7 @@ s8026   JSR s7D96
         STA aD407    ;Voice 2: Frequency Control - Low-Byte
         LDA #$0C
         STA aD40C    ;Voice 2: Attack / Decay Cycle Control
-f803D   RTS 
+f803D   RTS
 
         JSR e204D
         LSR aE920
@@ -2059,24 +1676,24 @@ b8062   LDA f803D,Y
 a8066   =*+$01
 a8067   =*+$02
         STA p0420,X
-        DEX 
-        DEY 
+        DEX
+        DEY
         DEC a50
         BNE b8062
-        CLC 
+        CLC
         LDA a4E
         ADC #$05
         STA a4E
-        CLC 
+        CLC
         LDA a4F
         ADC #$28
         STA a4F
         CMP #$BE
         BNE b805A
         LDA #$00
-        RTS 
+        RTS
 
-        NOP 
+        NOP
 j8084   LDA #$01
         JSR s7550
 s8089   LDA #$B0
@@ -2086,9 +1703,9 @@ s8089   LDA #$B0
 b8093   JSR s7FF8
         LDX #$0A
 b8098   LDY #$64
-b809A   DEY 
+b809A   DEY
         BNE b809A
-        DEX 
+        DEX
         BNE b8098
         LDX #$00
         JSR s79B6
@@ -2101,9 +1718,9 @@ b809A   DEY
         STA a7764
         JMP j7A36
 
-        NOP 
-        NOP 
-        NOP 
+        NOP
+        NOP
+        NOP
 j80BB   JSR s7DC5
         JSR s8052
         STA aD015    ;Sprite display Enable
@@ -2111,11 +1728,11 @@ j80BB   JSR s7DC5
         STA a02
 b80C8   LDX #$1E
 b80CA   LDY #$00
-b80CC   DEY 
+b80CC   DEY
         BNE b80CC
-        DEX 
+        DEX
         BNE b80CA
-        NOP 
+        NOP
         JSR s7FA5
         DEC a02
         BNE b80C8
@@ -2131,8 +1748,8 @@ s80E8   LDA a7B
         BEQ b80F7
         LDX #$08
 b80F0   JSR s811D
-        DEX 
-        DEX 
+        DEX
+        DEX
         BNE b80F0
 b80F7   LDX #$0E
         JSR s7643
@@ -2146,28 +1763,28 @@ j80FF   LDA aD004,X  ;Sprite 2 X Pos
 b810A   LDA f36,X
         EOR #$FF
         STA f36,X
-b8110   RTS 
+b8110   RTS
 
 s8111   LDA f36,X
         BNE b8119
         INC aD004,X  ;Sprite 2 X Pos
-        RTS 
+        RTS
 
 b8119   DEC aD004,X  ;Sprite 2 X Pos
-        RTS 
+        RTS
 
 s811D   DEC f37,X
         BEQ b8122
-        RTS 
+        RTS
 
-b8122   DEX 
+b8122   DEX
         CPX a7B
         BEQ b812D
         BCC b812D
-        INX 
+        INX
         JMP j8139
 
-b812D   INX 
+b812D   INX
         JSR s7698
         LDA aD015    ;Sprite display Enable
         ORA a64
@@ -2192,7 +1809,7 @@ s8151   LDA #>p07C3
         LDY #$1A
         LDA #$0A
 b8163   STA (p7F),Y
-        DEY 
+        DEY
         BNE b8163
         LDA #$00
         JSR s7D1E
@@ -2209,18 +1826,18 @@ j8170   JSR s7D96
         STA aD40C    ;Voice 2: Attack / Decay Cycle Control
         LDX #$14
 b8189   LDY #$C8
-b818B   DEY 
+b818B   DEY
         BNE b818B
-        DEX 
+        DEX
         BNE b8189
         JSR s7D96
         LDY #$1E
 b8196   LDX #$64
-b8198   DEX 
+b8198   DEX
         BNE b8198
-        DEY 
+        DEY
         BNE b8196
-        RTS 
+        RTS
 
 j819F   LDX #$0A
         LDA #$81
@@ -2228,16 +1845,16 @@ b81A3   ORA #$01
         STA a46
         CPY a46
         BEQ b81B1
-        LSR 
-        DEX 
-        DEX 
+        LSR
+        DEX
+        DEX
         BNE b81A3
-        RTS 
+        RTS
 
 b81B1   JMP j7D8C
 
 s81B4   LDA a2B
-        CLC 
+        CLC
         ADC #$14
         STA a2B
         LDA a2C
@@ -2248,20 +1865,22 @@ s81B4   LDA a2B
 j81C4   LDA a7E
         CMP #$78
         BEQ b81CB
-        RTS 
+        RTS
 
 b81CB   JSR eE544
         JSR s7FD8
         LDA #$00
         STA aD015    ;Sprite display Enable
         LDA #$19
+
+; e882 looks suspicious
         STA a02
 b81DA   JSR eE882
         LDX #$64
 b81DF   LDY #$64
-b81E1   DEY 
+b81E1   DEY
         BNE b81E1
-        DEX 
+        DEX
         BNE b81DF
         DEC a02
         BNE b81DA
@@ -2272,33 +1891,11 @@ b81E1   DEY
         LDY #$82
         JSR eAB1E
         LDA #$0A
-        JSR s7550
-j81FE   JMP j81FE
-
-        .BYTE $4B,$4F       ;ALR #$4F
-        .BYTE $53,$54       ;SRE ($54),Y
-        .BYTE $4F,$20,$4F   ;SRE $4F20
-        JMP a2049
-
-        .BYTE $53,$55       ;SRE (p55),Y
-        JMP e494F
-
-        LSR a4E45
-        BRK 
-        .BYTE $FF,$FF,$FF   ;ISC $FFFF,X
-        .BYTE $FF,$FF,$FF   ;ISC $FFFF,X
-        .BYTE $FF,$FF,$FF   ;ISC $FFFF,X
-        .BYTE $FF,$FF,$FF   ;ISC $FFFF,X
-        .BYTE $FF,$FF,$FF   ;ISC $FFFF,X
-        .BYTE $FF,$FF,$FF   ;ISC $FFFF,X
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
-        BRK 
+        .BYTE $20,$50,$75,$4C,$FE,$81
+        .TEXT "KOSTO OLI SULOINEN"
+        .BYTE $00
+        .BYTE $FF,$FF,$FF
+        .BYTE $FF,$FF,$FF
+        .BYTE $FF,$FF,$FF
+        .BYTE $FF,$FF,$FF
+        .BYTE $FF,$00,$00
