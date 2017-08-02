@@ -1,0 +1,1 @@
+.\tools\64tass.exe -C -l labels.txt .\src\kplus.tas -o .\build\kplus.prg
