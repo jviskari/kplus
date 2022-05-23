@@ -1,5 +1,5 @@
 ; da65 V2.18 - Ubuntu 2.19-1
-; Created:    2022-05-24 00:29:09
+; Created:    2022-05-24 00:56:35
 ; Input file: kplus.prg
 ; Page:       1
 
@@ -219,11 +219,8 @@ USRCMD          := $032E
 ILOAD           := $0330
 ISAVE           := $0332
 L204D           := $204D
-L4154           := $4154
 L4B4B           := $4B4B
 L4C4F           := $4C4F
-L4D2D           := $4D2D
-L502D           := $502D
 STMDSP          := $A00C
 FUNDSP          := $A052
 USRLOC          := $A058
@@ -1667,8 +1664,8 @@ JSCROG          := $FFED
 JPLOT           := $FFF0
 JIOBAS          := $FFF3
 ; ----------------------------------------------------------------------------
-;LOAD_ADDR:
-;        .byte   $4C,$73
+LOAD_ADDR:
+        .byte   $4C,$73
 ; ----------------------------------------------------------------------------
 START:  lda     #$FF
         sta     BLNSW
@@ -1885,37 +1882,13 @@ L761B:  lda     #$02
         jmp     L7D77
 
 ; ----------------------------------------------------------------------------
-        nop
-        .byte   $55
-L7622:  nop
-        .byte   $FB
-        .byte   $FB
-        .byte   $FB
-        brk
-        .byte   $BF
-        .byte   $BF
-        .byte   $BF
-        brk
-        .byte   $FF
-        brk
-        .byte   $FF
-        .byte   $FF
-        tax
-        eor     RDFLG,x
-        eor     $00,x
-        .byte   $FF
-        cmp     RIPRTY,x
-        .byte   $FF
-        .byte   $AB
-        cmp     BASZPT,x
-        brk
-        .byte   $7F
-        .byte   $7F
-        .byte   $7F
-        .byte   $7F
-        .byte   $7F
-        .byte   $7F
-        brk
+        .byte   $EA,$55
+L7622:  .byte   $EA,$FB,$FB,$FB,$00,$BF,$BF,$BF
+        .byte   $00,$FF,$00,$FF,$FF,$AA,$55,$AA
+        .byte   $55,$00,$FF,$D5,$AB,$FF,$AB,$D5
+        .byte   $FF,$00,$7F,$7F,$7F,$7F,$7F,$7F
+        .byte   $00
+; ----------------------------------------------------------------------------
 L7643:  dec     BUFPTR
         beq     L761B
         rts
@@ -1924,27 +1897,13 @@ L7643:  dec     BUFPTR
         nop
         nop
         nop
-        ror     $BD81,x
-        lda     ($A1,x)
-        lda     L7E81,x
-        brk
-        .byte   $FF
-        .byte   $87
-        .byte   $87
-        .byte   $FF
-        .byte   $FF
-        inc     $F8FC,x
-        .byte   $FC
-        inc     $FEFF,x
-        inc     $FFFE,x
-        brk
-        inc     $FEFE,x
-        inc     $FEFE,x
-        ror     L7E3E,x
-        inc     $FEFE,x
-        inc     $FEFE,x
-        nop
-        nop
+        .byte   $7E,$81,$BD,$A1,$A1,$BD,$81,$7E
+        .byte   $00,$FF,$87,$87,$FF,$FF,$FE,$FC
+        .byte   $F8,$FC,$FE,$FF,$FE,$FE,$FE,$FF
+        .byte   $00,$FE,$FE,$FE,$FE,$FE,$FE,$7E
+        .byte   $3E,$7E,$FE,$FE,$FE,$FE,$FE,$FE
+        .byte   $EA,$EA
+; ----------------------------------------------------------------------------
 L7675:  jsr     L75E7
         ldx     #$E9
 L767A:  lda     L7787,x
@@ -3017,8 +2976,7 @@ L7E25:  lda     #$F2
         lda     SPENA
         and     FACMO
         .byte   $8D
-L7E3D:  .byte   $15
-L7E3E:  .byte   $D0
+L7E3D:  ora     CRSW,x
 L7E3F:  lda     #$00
         sta     SP2X
         lda     #$14
@@ -3060,7 +3018,7 @@ L7E65:  lda     #$28
         jsr     L7550
         jsr     L7675
         jsr     L7C3F
-L7E81:  ldy     #$0A
+        ldy     #$0A
         ldx     #$0A
         jsr     LE50C
         ldy     #$7E
@@ -3069,50 +3027,19 @@ L7E81:  ldy     #$0A
 
 ; ----------------------------------------------------------------------------
         nop
-        ora     VARTXT
-        .byte   $4F
-        .byte   $53
-        .byte   $54
-        eor     ($4A,x)
-        eor     (INPFLG,x)
-        ora     (MSGFLG),y
-        sta     $9D9D,x
-        sta     $9D9D,x
-        sta     $9D9D,x
-        sta     $9D9D,x
-        .byte   $9E
-        dec     $20
-        and     (CURLIN),y
-        sec
-        .byte   $37
-        jsr     L4154
-        bvc     L7EF4
-        lsr     $2049
-        rol     $20
-        bvc     L7EFB
-        .byte   $53
-        eor     #$11
-        ora     (MSGFLG),y
-        sta     $9D9D,x
-        sta     $9D9D,x
-        sta     $9D9D,x
-        sta     $9D9D,x
-        sta     $969D,x
-        lsr     BMEMSIZ
-        jsr     L502D
-        eor     $4C
-        eor     #$11
-        ora     (MSGFLG),y
-        sta     $9D9D,x
-        sta     $9D9D,x
-        sta     $469B,x
-        .byte   $33
-        jsr     L4D2D
-        eor     FOUR6,x
-        eor     #$49
-        .byte   $4B
-        .byte   $4B
-        eor     #$00
+        .byte   $05,$4B,$4F,$53,$54,$41,$4A,$41
+        .byte   $11,$11,$9D,$9D,$9D,$9D,$9D,$9D
+        .byte   $9D,$9D,$9D,$9D,$9D,$9D,$9D,$9E
+        .byte   $C6,$20,$31,$39,$38,$37,$20,$54
+        .byte   $41,$50,$41,$4E,$49,$20,$26,$20
+        .byte   $50,$41,$53,$49,$11,$11,$9D,$9D
+        .byte   $9D,$9D,$9D,$9D,$9D,$9D,$9D,$9D
+        .byte   $9D,$9D,$9D,$9D,$9D,$96,$46,$37
+        .byte   $20,$2D,$50,$45,$4C,$49,$11,$11
+        .byte   $9D,$9D,$9D,$9D,$9D,$9D,$9D,$9D
+        .byte   $9B,$46,$33,$20,$2D,$4D,$55,$53
+        .byte   $49,$49,$4B,$4B,$49,$00
+; ----------------------------------------------------------------------------
         nop
         nop
         ldy     #$64
@@ -3120,8 +3047,7 @@ L7E81:  ldy     #$0A
 L7EF4:  sta     $2C,y
         dey
         bne     L7EF4
-        .byte   $A9
-L7EFB:  .byte   $73
+        lda     #$73
         sta     $88
         lda     #$59
         sta     $87
