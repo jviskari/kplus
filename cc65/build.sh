@@ -1,0 +1,1 @@
+cl65 -C c64-asm.cfg kplus.s --start-addr 0x734c -o test.prg
