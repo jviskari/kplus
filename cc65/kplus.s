@@ -1,5 +1,5 @@
 ; da65 V2.18 - Ubuntu 2.19-1
-; Created:    2022-05-24 00:21:29
+; Created:    2022-05-24 00:29:09
 ; Input file: kplus.prg
 ; Page:       1
 
@@ -1667,8 +1667,8 @@ JSCROG          := $FFED
 JPLOT           := $FFF0
 JIOBAS          := $FFF3
 ; ----------------------------------------------------------------------------
-LOAD_ADDR:
-        .byte   $4C,$73
+;LOAD_ADDR:
+;        .byte   $4C,$73
 ; ----------------------------------------------------------------------------
 START:  lda     #$FF
         sta     BLNSW
@@ -1983,7 +1983,7 @@ L76AB:  lda     $7E
         jmp     L7DA2
 
 ; ----------------------------------------------------------------------------
-GETJOY: lda     CIAPRB
+GETJOY: lda     CIAPRA
         lsr     a
         bcs     L76BB
         jsr     L76EC
