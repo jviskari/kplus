@@ -15,13 +15,30 @@
         RANGE { START $7760;      END   $776A; TYPE Code; };
         RANGE { START $7776;      END   $7787; TYPE Code; };
         RANGE { START $7788;      END   $78A8; TYPE ByteTable; };
-        RANGE { START $7E90;      END   $7EED; TYPE ByteTable; };
+        RANGE { START $7D04;      END   $7D13; TYPE TEXTTABLE; };
+        RANGE { START $7e90;      END   $7EED; TYPE TEXTTABLE; };
+        RANGE { START $8201;      END   $821f; TYPE TEXTTABLE; };
 
 
+
+        #sprites 
+        LABEL { NAME "SPR_BANK"; ADDR  $21BF;  SIZE 256; };
+        LABEL { NAME "SPR_PLR_RIGHT"; ADDR  $7788;  SIZE 64; };
+        LABEL { NAME "SPR_PLR_LEFT";  ADDR  $77C8;  SIZE 64; };
+        LABEL { NAME "SPR_ROBOT";     ADDR  $7808;  SIZE 64; };
+        LABEL { NAME "SPR_BALL";      ADDR  $7848;  SIZE 64; };
+        LABEL { NAME "SPR_STAR";      ADDR  $7888;  SIZE 64; };
+
+        LABEL { NAME "SPR0_PTR";      ADDR  $07F8;  SIZE 1; };
+
+        #movement
+
+        
 
         LABEL { NAME "LOAD_ADDR"; ADDR  $734a; SIZE 2;  };
         # Stack
         LABEL { NAME "stack";   ADDR  $100;  SIZE 255;  };
+        LABEL { NAME "SCREEN";  ADDR   $0400;  SIZE 1000;   };
 
         #VIC
         LABEL { NAME "SP0X";     ADDR  $D000;  SIZE 1;    };
@@ -175,7 +192,16 @@
        LABEL { NAME "SPR_COLLISION";  ADDR  $7D5D; };       
        LABEL { NAME "MENU" ;   ADDR  $7F0B; };
        LABEL { NAME "START2";  ADDR  $7f58; };
+       LABEL { NAME "SPR_INIT";ADDR  $7675; };
+       LABEL { NAME "SPR_DATA_CPY";ADDR  $767A; };
+              
        LABEL { NAME "GETJOY";  ADDR  $76b2; };
+
+       LABEL { NAME "MOVE_RIGHT";  ADDR  $76d2; };
+       LABEL { NAME "MOVE_LEFT";   ADDR  $76df; };
+
+       LABEL { NAME "JMP_RIGHT";   ADDR  $7a02; };
+       LABEL { NAME "JMP_LEFT";   ADDR   $7A1C; };
 
 
 LABEL { NAME "ADRAY1"; ADDR $0003 ; };     
@@ -248,7 +274,7 @@ LABEL { NAME "FACOV"; ADDR $0070 ; };
 LABEL { NAME "BUFPTR"; ADDR $0071 ; };     
 LABEL { NAME "CHRGET"; ADDR $0073 ; };     
 LABEL { NAME "CHRGOT"; ADDR $0079 ; };     
-LABEL { NAME "TXTPTR"; ADDR $007A ; };     
+LABEL { NAME "PLR_DIR"; ADDR $007A ; };     
 LABEL { NAME "QNUM"; ADDR $0080 ; };     
 LABEL { NAME "CHRRTS"; ADDR $008A ; };     
 LABEL { NAME "RNDX"; ADDR $008B ; };     
