@@ -8,16 +8,17 @@
         };
 
         SEGMENT { START $800;     END   $9FFF; NAME "ram"; };
-        RANGE { START $734A;      END   $734B; TYPE ByteTable; };
+        RANGE { START $734A;      END   $734B; TYPE skip; };
         RANGE { START $7359;      END   $752b; TYPE ByteTable; };
         RANGE { START $7620;      END   $7642; TYPE ByteTable; };
         RANGE { START $764b;      END   $7674; TYPE ByteTable; };
         RANGE { START $7760;      END   $776A; TYPE Code; };
         RANGE { START $7776;      END   $7787; TYPE Code; };
         RANGE { START $7788;      END   $78A8; TYPE ByteTable; };
-        RANGE { START $7D04;      END   $7D13; TYPE TEXTTABLE; };
-        RANGE { START $7e90;      END   $7EED; TYPE TEXTTABLE; };
-        RANGE { START $8201;      END   $821f; TYPE TEXTTABLE; };
+        #texts
+        RANGE { START $7D04;      END   $7D13; TYPE ByteTable; };
+        RANGE { START $7e90;      END   $7EED; TYPE ByteTable; };
+        RANGE { START $8201;      END   $821f; TYPE ByteTable; };
 
 
 
