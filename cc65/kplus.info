@@ -16,9 +16,15 @@
         RANGE { START $7776;      END   $7787; TYPE Code; };
         RANGE { START $7788;      END   $78A8; TYPE ByteTable; };
         #texts
+
+        
+        RANGE { START $7BF9;      END   $7C10; TYPE Code; };
         RANGE { START $7D04;      END   $7D13; TYPE ByteTable; };
         RANGE { START $7e90;      END   $7EED; TYPE ByteTable; };
+        RANGE { START $7f50;      END   $7fd7; TYPE Code; };   
+        RANGE { START $8052;      END   $8083; TYPE Code; };        
         RANGE { START $8201;      END   $821f; TYPE ByteTable; };
+
 
 
 
@@ -28,7 +34,7 @@
         LABEL { NAME "SPR_PLR_LEFT";  ADDR  $77C8;  SIZE 64; };
         LABEL { NAME "SPR_ROBOT";     ADDR  $7808;  SIZE 64; };
         LABEL { NAME "SPR_BALL";      ADDR  $7848;  SIZE 64; };
-        LABEL { NAME "SPR_STAR";      ADDR  $7888;  SIZE 64; };
+        LABEL { NAME "SPR_STAR";      ADDR  $7888;  SIZE 32; };
 
         LABEL { NAME "SPR0_PTR";      ADDR  $07F8;  SIZE 1; };
 
@@ -200,9 +206,16 @@
 
        LABEL { NAME "MOVE_RIGHT";  ADDR  $76d2; };
        LABEL { NAME "MOVE_LEFT";   ADDR  $76df; };
-
+       LABEL { NAME "LSR_X4_PATCH";       ADDR  $78A9; };
+       LABEL { NAME "W78AE";       ADDR  $78AE; };
+       LABEL { NAME "SET_SP1_POS";       ADDR  $78E7; };
        LABEL { NAME "JMP_RIGHT";   ADDR  $7a02; };
-       LABEL { NAME "JMP_LEFT";   ADDR   $7A1C; };
+       LABEL { NAME "JMP_LEFT";    ADDR  $7A1C; };
+
+       LABEL { NAME "INTERRUPT";   ADDR   $7C61; };
+       LABEL { NAME "SP1_ENA_BGPRI";   ADDR   $7FD8; };
+  
+       LABEL { NAME "JMP_L8084";   ADDR   $8084; };
 
 
 LABEL { NAME "ADRAY1"; ADDR $0003 ; };     

@@ -1,5 +1,5 @@
 ; da65 V2.18 - Ubuntu 2.19-1
-; Created:    2022-05-24 01:06:49
+; Created:    2023-05-09 00:27:06
 ; Input file: kplus.prg
 ; Page:       1
 
@@ -77,7 +77,7 @@ FACOV           := $0070
 BUFPTR          := $0071
 CHRGET          := $0073
 CHRGOT          := $0079
-TXTPTR          := $007A
+PLR_DIR         := $007A
 QNUM            := $0080
 CHRRTS          := $008A
 RNDX            := $008B
@@ -218,9 +218,11 @@ ICLALL          := $032C
 USRCMD          := $032E
 ILOAD           := $0330
 ISAVE           := $0332
+SCREEN          := $0400
+SPR0_PTR        := $07F8
 L204D           := $204D
-L4B4B           := $4B4B
-L4C4F           := $4C4F
+SPR_BANK        := $21BF
+LOAD_ADDR       := $734A
 STMDSP          := $A00C
 FUNDSP          := $A052
 USRLOC          := $A058
@@ -1664,9 +1666,6 @@ JSCROG          := $FFED
 JPLOT           := $FFF0
 JIOBAS          := $FFF3
 ; ----------------------------------------------------------------------------
-;LOAD_ADDR:
-;        .byte   $4C,$73
-; ----------------------------------------------------------------------------
 START:  lda     #$FF
         sta     BLNSW
         jmp     START2
@@ -1904,14 +1903,16 @@ L7643:  dec     BUFPTR
         .byte   $3E,$7E,$FE,$FE,$FE,$FE,$FE,$FE
         .byte   $EA,$EA
 ; ----------------------------------------------------------------------------
-L7675:  jsr     L75E7
+SPR_INIT:
+        jsr     L75E7
         ldx     #$E9
-L767A:  lda     L7787,x
-        sta     $21BF,x
+SPR_DATA_CPY:
+        lda     L7787,x
+        sta     SPR_BANK,x
         dex
-        bne     L767A
+        bne     SPR_DATA_CPY
         lda     #$88
-        sta     $07F8
+        sta     SPR0_PTR
         lda     #$8B
         sta     $07F9
         lda     #$89
@@ -1950,30 +1951,32 @@ L76BB:  lsr     a
         lsr     a
         pha
         bcs     L76C3
-        jsr     L76DF
+        jsr     MOVE_LEFT
 L76C3:  pla
         lsr     a
         pha
         bcs     L76CB
-        jsr     L76D2
+        jsr     MOVE_RIGHT
 L76CB:  pla
         lsr     a
         bcs     L76DE
         jmp     L7BF9
 
 ; ----------------------------------------------------------------------------
-L76D2:  lda     #$01
-        sta     TXTPTR
+MOVE_RIGHT:
+        lda     #$01
+        sta     PLR_DIR
         lda     #$87
-        sta     $07F8
+        sta     SPR0_PTR
         inc     SP0X
 L76DE:  rts
 
 ; ----------------------------------------------------------------------------
-L76DF:  lda     #$00
-        sta     TXTPTR
+MOVE_LEFT:
+        lda     #$00
+        sta     PLR_DIR
         lda     #$88
-        sta     $07F8
+        sta     SPR0_PTR
         dec     SP0X
         rts
 
@@ -1982,13 +1985,13 @@ L76EC:  jmp     L7B86
 
 ; ----------------------------------------------------------------------------
 L76EF:  pha
-L76F0:  lda     TXTPTR
+L76F0:  lda     PLR_DIR
         beq     L76FA
-        jsr     L7A02
+        jsr     JMP_RIGHT
         jmp     L76FD
 
 ; ----------------------------------------------------------------------------
-L76FA:  jsr     L7A1C
+L76FA:  jsr     JMP_LEFT
 L76FD:  ldx     #$79
         jsr     L7753
         inc     $FE
@@ -2004,10 +2007,10 @@ L76FD:  ldx     #$79
         nop
 L7711:  lda     #$00
         tax
-L7714:  sta     $2242,x
+L7714:  sta     SPR_BANK+$83,x
         dex
         bne     L7714
-L771A:  lda     L7871,y
+L771A:  lda     SPR_BALL+$29,y
         sta     $22BF,y
         dey
         bne     L771A
@@ -2073,6 +2076,7 @@ L7787           := * + $0002
         jmp     L7F39
 
 ; ----------------------------------------------------------------------------
+SPR_PLR_RIGHT:
         .byte   $00,$00,$00,$00,$28,$00,$00,$BE
         .byte   $00,$02,$FF,$80,$02,$F9,$80,$02
         .byte   $F9,$80,$02,$FE,$80,$02,$BF,$80
@@ -2081,6 +2085,7 @@ L7787           := * + $0002
         .byte   $6F,$E0,$02,$7B,$E0,$0B,$E2,$E0
         .byte   $0B,$82,$80,$0A,$02,$A0,$0A,$02
         .byte   $A0,$00,$00,$00,$00,$00,$00,$32
+SPR_PLR_LEFT:
         .byte   $00,$00,$00,$00,$28,$00,$00,$BE
         .byte   $00,$02,$FF,$80,$02,$6F,$80,$02
         .byte   $6F,$80,$02,$BF,$80,$02,$FE,$80
@@ -2089,6 +2094,7 @@ L7787           := * + $0002
         .byte   $F9,$60,$0B,$ED,$80,$0B,$8B,$E0
         .byte   $02,$82,$E0,$0A,$80,$A0,$0A,$80
         .byte   $A0,$00,$00,$00,$00,$00,$00,$38
+SPR_ROBOT:
         .byte   $00,$00,$00,$00,$20,$00,$00,$A8
         .byte   $00,$02,$CE,$00,$0A,$32,$80,$0A
         .byte   $CE,$80,$0A,$AA,$80,$0A,$AA,$80
@@ -2097,31 +2103,34 @@ L7787           := * + $0002
         .byte   $AA,$A8,$9F,$DF,$D8,$2F,$FF,$E0
         .byte   $2F,$FF,$E0,$0B,$FF,$80,$02,$DE
         .byte   $00,$00,$A8,$00,$00,$00,$00,$32
+SPR_BALL:
         .byte   $07,$80,$00,$1F,$E0,$00,$3F,$F0
         .byte   $00,$7F,$F8,$00,$7F,$F8,$00,$FF
         .byte   $FC,$00,$FF,$FC,$00,$FF,$FC,$00
         .byte   $FF,$FC,$00,$7F,$F8,$00,$7F,$F8
         .byte   $00,$3F,$F0,$00,$1F,$E0,$00,$07
-        .byte   $80
-L7871:  .byte   $FF,$FF,$FF,$FF,$00,$00,$00,$FF
-        .byte   $FF,$FF,$FF,$FF,$FF,$55,$55,$55
-        .byte   $AA,$AA,$AA,$55,$55,$55,$AA,$AA
-L7889:  .byte   $AA,$04,$00,$00,$04,$00,$00,$0E
-        .byte   $00,$00,$0E,$00,$00,$3F,$80,$00
-        .byte   $FF,$E0,$00,$3F,$80,$00,$0E,$00
-        .byte   $00,$0E,$00,$00,$04,$00,$00,$04
+        .byte   $80,$FF,$FF,$FF,$FF,$00,$00,$00
+        .byte   $FF,$FF,$FF,$FF,$FF,$FF,$55,$55
+        .byte   $55,$AA,$AA,$AA,$55,$55,$55,$AA
+SPR_STAR:
+        .byte   $AA,$AA,$04,$00,$00,$04,$00,$00
+        .byte   $0E,$00,$00,$0E,$00,$00,$3F,$80
+        .byte   $00,$FF,$E0,$00,$3F,$80,$00,$0E
+        .byte   $00,$00,$0E,$00,$00,$04,$00,$00
+        .byte   $04
 ; ----------------------------------------------------------------------------
-L78A9:  lsr     a
+LSR_X4_PATCH:
+        lsr     a
         lsr     a
         lsr     a
         lsr     a
         rts
 
 ; ----------------------------------------------------------------------------
-L78AE:  ldy     #$18
+W78AE:  ldy     #$18
         jsr     L7711
         ldy     #$1F
-L78B5:  lda     L7889,y
+L78B5:  lda     SPR_STAR+$01,y
         sta     $2309,y
         dey
         bne     L78B5
@@ -2133,7 +2142,7 @@ L78B5:  lda     L7889,y
 
 ; ----------------------------------------------------------------------------
 L78C9:  sta     $84
-        lda     TXTPTR
+        lda     PLR_DIR
         sta     $85
         jsr     L7D96
         lda     #$81
@@ -2147,11 +2156,12 @@ L78C9:  sta     $84
         rts
 
 ; ----------------------------------------------------------------------------
-L78E7:  jsr     CLSR
+SET_SP1_POS:
+        jsr     CLSR
         lda     #$E0
         sta     SP0Y
-        jsr     L7FD8
-        jmp     L8084
+        jsr     SP1_ENA_BGPRI
+        jmp     JMP_L8084
 
 ; ----------------------------------------------------------------------------
         nop
@@ -2160,14 +2170,14 @@ L78E7:  jsr     CLSR
 L78F8:  jsr     L7DC8
         inc     $7B
         inc     $84
-        jsr     L7675
+        jsr     SPR_INIT
         jmp     L80BB
 
 ; ----------------------------------------------------------------------------
 L7905:  jsr     CLSR
         lda     #$41
         ldy     #$04
-L790C:  sta     $0406,y
+L790C:  sta     SCREEN+$06,y
         dey
         bne     L790C
         lda     #$03
@@ -2312,7 +2322,8 @@ L79CE:  clc
 L79FF:  jmp     L7B34
 
 ; ----------------------------------------------------------------------------
-L7A02:  cpy     #$10
+JMP_RIGHT:
+        cpy     #$10
         bcs     L7A0D
         inc     SP0X
         dec     SP0Y
@@ -2330,7 +2341,8 @@ L7A15:  inc     SP0Y
         rts
 
 ; ----------------------------------------------------------------------------
-L7A1C:  cpy     #$10
+JMP_LEFT:
+        cpy     #$10
         bcs     L7A27
         dec     SP0X
         dec     SP0Y
@@ -2406,13 +2418,11 @@ L7A9E:  dey
         jmp     L7A9A
 
 ; ----------------------------------------------------------------------------
-L7AA2:  
+L7AA2:  nop
         sty     $76
+        nop
+        nop
         jmp     L7A4C
-        nop
-        nop
-        nop
-
 
 ; ----------------------------------------------------------------------------
 L7AAA:  dec     $77
@@ -2476,7 +2486,7 @@ L7AF8:  sta     ($7F),y
         rts
 
 ; ----------------------------------------------------------------------------
-L7B0A:  jmp     L78E7
+L7B0A:  jmp     SET_SP1_POS
 
 ; ----------------------------------------------------------------------------
 L7B0D:  lda     FREKZP
@@ -2556,7 +2566,7 @@ L7B73:  sec
 ; ----------------------------------------------------------------------------
 L7B7B:  lda     #$41
         ldy     #$04
-L7B7F:  sta     $07C6,y
+L7B7F:  sta     SCREEN+$3C6,y
         dey
         bne     L7B7F
 L7B85:  rts
@@ -2642,9 +2652,10 @@ L7BF9:  lda     $84
         lda     SP0Y
         sta     SP2Y
         lda     #$01
-        .byte   $4C
-        .byte   $C9
-L7C11:  sei
+L7C11           := * + $0002
+        jmp     L78C9
+
+; ----------------------------------------------------------------------------
         lda     $84
         bne     L7C11
 L7C16:  lda     $85
@@ -2691,6 +2702,7 @@ L7C43:  sta     $D3FF,x
         rts
 
 ; ----------------------------------------------------------------------------
+INTERRUPT:
         pha
         tya
         pha
@@ -2742,7 +2754,7 @@ L7C96:  lda     #$01
         jsr     STROUT
         lda     #$30
         ldy     #$05
-L7CBB:  sta     $04E8,y
+L7CBB:  sta     SCREEN+$E8,y
         dey
         bne     L7CBB
         rts
@@ -2794,17 +2806,9 @@ L7D00:  dey
         rts
 
 ; ----------------------------------------------------------------------------
-        bvc     L7D47
-        jmp     L4B4B
-
+        .byte   $50,$41,$4C,$4B,$4B,$49,$4F,$00
+        .byte   $45,$4E,$45,$52,$47,$49,$41,$00
 ; ----------------------------------------------------------------------------
-        eor     #$4F
-        brk
-        eor     DEFPNT
-        eor     $52
-        .byte   $47
-        eor     #$41
-        brk
         nop
         nop
 L7D16:  lda     $7E
@@ -2837,7 +2841,7 @@ L7D40:  lda     (FREKZP),y
         cmp     #$42
         beq     L7D50
 L7D46:  dey
-L7D47:  bne     L7D40
+        bne     L7D40
         jsr     L7562
         dex
         bne     L7D3E
@@ -2928,17 +2932,17 @@ L7DD3:  jsr     L7B7B
         jsr     L7D1C
 L7DD9:  ldy     #$07
         lda     #$20
-L7DDD:  sta     $078F,y
+L7DDD:  sta     SCREEN+$38F,y
         dey
         bne     L7DDD
         lda     VARTAB
         clc
         adc     #$20
-        jsr     L78A9
+        jsr     LSR_X4_PATCH
         lsr     a
         tay
         lda     #$44
-L7DEF:  sta     $078F,y
+L7DEF:  sta     SCREEN+$38F,y
         dey
         bne     L7DEF
         jsr     L7D96
@@ -3015,10 +3019,10 @@ L7E65:  lda     #$28
         sta     VARTAB
         lda     #$01
         sta     COLOR
-        jsr     L78AE
+        jsr     W78AE
         jsr     CLSR
         jsr     L7550
-        jsr     L7675
+        jsr     SPR_INIT
         jsr     L7C3F
         ldy     #$0A
         ldx     #$0A
@@ -3044,7 +3048,7 @@ L7E65:  lda     #$28
 ; ----------------------------------------------------------------------------
         nop
         nop
-        ldy     #$64
+L7EF0:  ldy     #$64
         lda     #$00
 L7EF4:  sta     $2C,y
         dey
@@ -3115,9 +3119,11 @@ L7F69:  lda     L7F74,x
         sta     $CFFF,x
         dex
         bne     L7F69
-        .byte   $4C
-        .byte   $F0
-L7F74:  ror     $E1B4,x
+L7F74           := * + $0002
+        jmp     L7EF0
+
+; ----------------------------------------------------------------------------
+        ldy     $E1,x
         .byte   $1F
         brk
         brk
@@ -3179,7 +3185,8 @@ L7FC7:  sec
         rts
 
 ; ----------------------------------------------------------------------------
-L7FD8:  lda     #$07
+SP1_ENA_BGPRI:
+        lda     #$07
         sta     L8067
         lda     #$18
         sta     L8066
@@ -3251,9 +3258,9 @@ L805A:  ldx     #$05
         ldx     $4F
         ldy     DEFPNT
 L8062:  lda     L803D,y
-        .byte   $9D
-L8066:  .byte   $20
-L8067:  .byte   $04
+L8066           := * + $0001
+L8067           := * + $0002
+        sta     SCREEN+$20,x
         dex
         dey
         dec     DSCPNT
@@ -3273,7 +3280,8 @@ L8067:  .byte   $04
 
 ; ----------------------------------------------------------------------------
         nop
-L8084:  lda     #$01
+JMP_L8084:
+        lda     #$01
         jsr     L7550
 L8089:  lda     #$B0
         sta     L7764
@@ -3463,7 +3471,7 @@ L81C4:  lda     $7E
 
 ; ----------------------------------------------------------------------------
 L81CB:  jsr     CLSR
-        jsr     L7FD8
+        jsr     SP1_ENA_BGPRI
         lda     #$00
         sta     SPENA
         lda     #$19
@@ -3488,31 +3496,11 @@ L81E1:  dey
 L81FE:  jmp     L81FE
 
 ; ----------------------------------------------------------------------------
-        .byte   $4B
-        .byte   $4F
-        .byte   $53
-        .byte   $54
-        .byte   $4F
-        jsr     L4C4F
-        eor     #$20
-        .byte   $53
-        eor     $4C,x
-        .byte   $4F
-        eor     #$4E
-        eor     DEFPNT
-        brk
-        .byte   $FF
-        .byte   $FF
-        .byte   $FF
-        .byte   $FF
-        .byte   $FF
-        .byte   $FF
-        .byte   $FF
-        .byte   $FF
-        .byte   $FF
-        .byte   $FF
-        .byte   $FF
-        .byte   $FF
+        .byte   $4B,$4F,$53,$54,$4F,$20,$4F,$4C
+        .byte   $49,$20,$53,$55,$4C,$4F,$49,$4E
+        .byte   $45,$4E,$00,$FF,$FF,$FF,$FF,$FF
+        .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF
+; ----------------------------------------------------------------------------
         .byte   $FF
         brk
         brk
